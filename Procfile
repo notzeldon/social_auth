@@ -1,1 +1,1 @@
-web: gunicorn socialauth.wsgi
+web: python manage.py migrate & gunicorn socialauth.wsgi
