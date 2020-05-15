@@ -1,0 +1,1 @@
+web: gunicorn socialauth.wsgi
