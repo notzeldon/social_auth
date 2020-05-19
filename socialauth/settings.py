@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'socialauth.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db1.sqlite3'),
     }
 }
 
@@ -134,6 +134,10 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 LOGIN_REDIRECT_URL = '/'
+
+
+AUTH_USER_MODEL = 'demo.DemoUser'
+SOCIAL_AUTH_USER_MODEL = 'demo.DemoUser'
 
 # Local settings
 

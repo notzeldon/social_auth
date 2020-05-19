@@ -4,6 +4,16 @@
 <button>
     <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
 </button>
+<br>
+
+<form action="{% url 'register' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button>Submit</button>
+</form>
+
+
+<hr>
 <button>
     <a href="{% url 'logout' %}">Logout</a>
 </button>

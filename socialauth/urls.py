@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from demo.views import DemoTemplateView, logout_
+from demo.views import DemoTemplateView, logout_, DemoRegisterView
 
 urlpatterns = [
     path('', DemoTemplateView.as_view(), name="home"),
+    path('register/', DemoRegisterView.as_view(), name="register"),
     path('logout/', logout_, name="logout"),
     path('social-auth/', include('social_django.urls', namespace="social")),
     path('admin/', admin.site.urls),
